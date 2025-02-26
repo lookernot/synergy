@@ -1,0 +1,1730 @@
+* {
+    font-family: 'Yekan Bakh', sans-serif;
+}
+:root {
+    --primary-color: #0f5ca8;
+    --primary-hover: #0d4e8f;
+    --secondary-color: #31b8da;
+    --success-color: #28c76f;
+    --warning-color: #ff9f43;
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #999;
+    --border-color: #eee;
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-md: 0 5px 15px rgba(0,0,0,0.15);
+    --transition: all 0.3s ease;
+    --padding-section: 80px 220px;
+
+    /* Sizing variables */
+    --border-radius-sm: 5px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 25px;
+    
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+
+    /* Font family variable */
+    --font-primary: 'Yekan Bakh', sans-serif;
+
+    /* Add new color variables with RGB values */
+    --primary-color-rgb: 15, 92, 168;
+    --secondary-color-rgb: 49, 184, 218;
+    
+    /* Add new sizing variables */
+    --header-height: 80px;
+    --hero-height: 380px;
+    --section-max-width: 1200px;
+    --quick-access-height: 100px;
+    --quick-access-height-sticky: 80px;
+    --quick-access-width: 1100px;
+    --quick-access-width-sticky: 900px;
+
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-lighter: #f5f8fa;
+    --bg-gradient-primary: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    --bg-gradient-hero: linear-gradient(rgba(var(--primary-color-rgb), 0.2), rgba(var(--primary-color-rgb), 0.7));
+    --bg-transparent-light: rgba(255, 255, 255, 0.1);
+    --bg-transparent-primary: rgba(var(--primary-color-rgb), 0.1);
+    --bg-sticky: rgba(255, 255, 255, 0.95);
+
+    /* Font sizes - move from existing variables */
+    --font-size-base: 16px;
+    --font-size-hero: 36px;
+    --font-size-hero-p: 18px;
+    --font-size-icon: 24px;
+    --font-size-icon-lg: 30px;
+    --font-size-icon-sm: 16px;
+}
+
+/* Hero Section */
+.sources-hero {
+    margin-top: -80px;
+    height: var(--hero-height);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Calculator Tools Section */
+.calculator-tools-section {
+    padding: 40px 220px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.calculator-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.calculator-tool-card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+/* Updated Solar Basics Section */
+.solar-basics-section {
+    padding: var(--padding-section);
+    background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--bg-white) 100%);
+}
+
+.solar-basics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Update to use minmax */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.solar-basics-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure full width */
+    min-height: 100%; /* Minimum height */
+}
+
+.solar-basics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.source-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.source-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.solar-basics-card:hover .source-image img {
+    transform: scale(1.1);
+}
+
+.source-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.source-content h3 {
+    color: var(--text-dark);
+    font-size: var(--font-size-lg);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.source-details {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Update Info Row Layout */
+.info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.source-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: var(--bg-lighter);
+    border-radius: var(--border-radius-md);
+    width: 100%;
+}
+
+.source-detail-item .icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px; /* Add to prevent icon shrinking */
+    background: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.source-detail-item .icon i {
+    color: var(--success-color);
+    font-size: var(--font-size-sm);
+}
+
+.source-detail-item .text {
+    flex: 1; /* Allow text to take available space */
+    color: var(--text-medium);
+    font-size: var(--font-size-sm); /* Increased from xs to sm */
+}
+
+.source-detail-item .value {
+    color: var(--text-dark);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    white-space: nowrap; /* Prevent value from wrapping */
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--bg-lighter);
+    border-radius: 3px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--success-color);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.progress-text {
+    color: var(--text-medium);
+    font-size: var(--font-size-xs);
+    margin-top: 5px;
+    display: block;
+}
+
+.view-details {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: var(--success-color);
+    color: white;
+    text-align: center;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-top: auto;
+}
+
+.view-details:hover {
+    background: #1fa55e;
+    transform: translateY(-2px);
+}
+
+
+
+/* Webinars Section */
+.solar-webinars-section {
+    padding: 40px 220px;
+}
+
+.solar-webinars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.solar-webinar-card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+/* Tools Section */
+.tools-section {
+    padding: var(--padding-section);
+    background: var(--bg-white);
+}
+
+.section-header {
+    text-align: right;
+    margin-bottom: 40px;
+    position: relative;
+    padding-right: 20px;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    display: block;
+    color: var(--primary-color);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.section-header h2 {
+    color: var(--text-dark);
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+}
+
+.section-content {
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+}
+
+.tools-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tool-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    padding: 25px;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--bg-gradient-primary);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.tool-card:hover::before {
+    opacity: 1;
+}
+
+.tool-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-transparent-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tool-icon i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.tool-content h3 {
+    color: var(--text-dark);
+    font-size: var(--font-size-lg);
+    margin-bottom: 10px;
+}
+
+.tool-content p {
+    color: var(--text-medium);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tool-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--bg-white);
+    border-radius: var(--border-radius-md);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-medium);
+    font-size: var(--font-size-sm);
+}
+
+.feature-item i {
+    color: var(--primary-color);
+    font-size: var(--font-size-md);
+}
+
+.use-tool-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.use-tool-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* Custom Tool Card Styles */
+.tool-card.roi-calculator {
+    background: linear-gradient(to bottom right, var(--bg-white), #f0f7ff);
+}
+
+.tool-card.roi-calculator .tool-icon {
+    background: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.tool-card.roi-calculator:hover::before {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.tool-card.energy-calculator {
+    background: linear-gradient(to bottom right, var(--bg-white), #f0fffa);
+}
+
+.tool-card.energy-calculator .tool-icon {
+    background: rgba(var(--success-color), 0.1);
+}
+
+.tool-card.energy-calculator:hover::before {
+    background: linear-gradient(90deg, var(--success-color), var(--secondary-color));
+}
+
+.tool-card.environmental-calculator {
+    background: linear-gradient(to bottom right, var(--bg-white), #fff7f0);
+}
+
+.tool-card.environmental-calculator .tool-icon {
+    background: rgba(var(--warning-color), 0.1);
+}
+
+.tool-card.environmental-calculator:hover::before {
+    background: linear-gradient(90deg, var(--warning-color), var(--secondary-color));
+}
+
+/* Custom Tool Icon Colors */
+.roi-calculator .tool-icon i {
+    color: var(--primary-color);
+}
+
+.energy-calculator .tool-icon i {
+    color: var(--success-color);
+}
+
+.environmental-calculator .tool-icon i {
+    color: var(--warning-color);
+}
+
+/* Custom Button Colors */
+.roi-calculator .use-tool-btn {
+    background: var(--primary-color);
+}
+
+.energy-calculator .use-tool-btn {
+    background: var(--success-color);
+}
+
+.environmental-calculator .use-tool-btn {
+    background: var(--warning-color);
+}
+
+.roi-calculator .use-tool-btn:hover {
+    background: var(--primary-hover);
+}
+
+.energy-calculator .use-tool-btn:hover {
+    background: #1fa55e;
+}
+
+.environmental-calculator .use-tool-btn:hover {
+    background: #ff8510;
+}
+
+/* Custom Feature Item Colors */
+.roi-calculator .feature-item i {
+    color: var(--primary-color);
+}
+
+.energy-calculator .feature-item i {
+    color: var(--success-color);
+}
+
+.environmental-calculator .feature-item i {
+    color: var(--warning-color);
+}
+
+/* Common Card Components */
+.source-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.source-status.calculator { background: var(--primary-color); }
+.source-status.basics { background: var(--success-color); }
+.source-status.webinar { background: var(--warning-color); }
+
+/* Common Section Title */
+.section-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    position: relative;
+    padding-right: 15px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* View More Button */
+.view-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-medium);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.view-more-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.view-more-btn i {
+    transition: transform 0.3s;
+}
+
+.view-more-btn:hover i {
+    transform: translateY(3px);
+}
+
+.source-types {
+    display: flex;
+    gap: 30px;
+}
+
+.source-type-btn {
+    padding: 12px 25px;
+    background: transparent;
+    color: var(--text-medium);
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.source-type-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Card Content Styles */
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: var(--font-size-lg);
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Section Header Styles */
+.section-identifier {
+    color: var(--primary-color);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+.section-content h2 {
+    font-size: var(--font-size-xxl);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-content h3 {
+    font-size: var(--font-size-xl);
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-xl);
+    font-weight: 500;
+}
+
+/* Calculator Popup Styles */
+.calculator-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.calculator-popup.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.calculator-content {
+    width: 800px;
+    height: 600px;
+    background: var(--bg-white);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-header {
+    padding: 15px 20px;
+    height: 40px;
+    background: var(--bg-lighter);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculator-header h2 {
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.close-calculator {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bg-white);
+    color: var(--text-medium);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-calculator:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Calculator Mode Switch - Updated */
+.calculator-mode-switch {
+    padding: 10px 20px;
+    height: auto;
+    background: var(--bg-lighter);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mode-btn {
+    min-width: 140px;
+    padding: 8px 20px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-medium);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(15, 92, 168, 0.2);
+}
+
+.mode-btn:hover:not(.active) {
+    background: var(--bg-lighter);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.calculator-body {
+    height: calc(100% - 110px); /* Adjusted to account for mode switch height */
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.calculator-left {
+    width: 65%;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+}
+
+.form-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    background: var(--bg-lighter);
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.form-section h3 {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-medium);
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(15, 92, 168, 0.1);
+    outline: none;
+}
+
+.calculator-right {
+    width: 35%;
+    padding: 20px;
+    background: var(--bg-lighter);
+}
+
+.calculator-results {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.result-group {
+    margin-bottom: 20px;
+}
+
+.result-group:last-child {
+    margin-bottom: 0;
+}
+
+.result-group h3 {
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.result-label {
+    color: var(--text-medium);
+    font-size: 12px;
+}
+
+.result-value {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.calculate-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(15, 92, 168, 0.2);
+}
+
+/* Updated Calculator Popup Styles */
+.calculator-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    color: var(--text-medium);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    position: relative;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.form-groups-inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.calculator-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-md);
+    color: var(--text-dark);
+    background: white;
+}
+
+.result-group {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.result-group h3 {
+    font-size: var(--font-size-md);
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+/* Updated Calculator Popup Styles */
+.calculator-mode-switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: var(--bg-lighter);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mode-btn {
+    padding: 8px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-medium);
+    cursor: pointer;
+    font-size: var(--font-size-md);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition);
+}
+
+.mode-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.form-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-section {
+    background: var(--bg-lighter);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+}
+
+.form-section h3 {
+    color: var(--primary-color);
+    font-size: var(--font-size-md);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.loan-details {
+    transition: var(--transition);
+}
+
+
+
+.form-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-section {
+    background: var(--bg-lighter);
+    padding: 15px;
+    border-radius: var(--border-radius-md);
+}
+
+.form-section h3 {
+    color: var(--primary-color);
+    font-size: var(--font-size-md);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.calculator-results {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+}
+
+.result-group {
+    margin-bottom: 20px;
+}
+
+.result-group:last-child {
+    margin-bottom: 0;
+}
+
+.result-group h3 {
+    color: var(--text-dark);
+    font-size: var(--font-size-md);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Add these styles if they don't exist or update them */
+.calculator-popup#energyCalculator .calculator-left {
+    padding: 30px;
+    width: 60%;
+}
+
+.calculator-popup#energyCalculator .calculator-right {
+    width: 40%;
+    background: var(--bg-lighter);
+}
+
+.calculator-popup#energyCalculator .form-section {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.calculator-popup#energyCalculator .result-group {
+    margin-bottom: 30px;
+}
+
+.calculator-popup#energyCalculator .calculate-btn {
+    margin-top: 30px;
+}
+
+/* Environmental Calculator Specific Styles */
+.calculator-popup#environmentalCalculator .calculator-left {
+    padding: 30px;
+    width: 60%;
+}
+
+.calculator-popup#environmentalCalculator .calculator-right {
+    width: 40%;
+    background: var(--bg-lighter);
+}
+
+.calculator-popup#environmentalCalculator .form-section {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.calculator-popup#environmentalCalculator .result-group {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: var(--bg-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.calculator-popup#environmentalCalculator .calculate-btn {
+    margin-top: 30px;
+    background: var(--warning-color);
+}
+
+.calculator-popup#environmentalCalculator .calculate-btn:hover {
+    background: #ff8510;
+}
+
+/* Unified Section Header Styles */
+.section-content {
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: right;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-identifier {
+    color: var(--primary-color);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.section-header h2,
+.section-content h2 {
+    color: var(--text-dark);
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    padding-right: 20px;
+}
+
+.section-header h2::before,
+.section-content h2::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section-header h3,
+.section-content h3 {
+    color: var(--text-medium);
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Update specific section headers to match */
+.tools-section .section-header,
+.solar-basics-section .section-header,
+.solar-webinars-section .section-header {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Responsive Styles for sources-hero */
+@media screen and (max-width: 1400px) {
+    .tools-section {
+        padding: 60px 120px;
+    }
+    .solar-basics-section {
+        padding: 60px 120px;
+    }
+    .solar-webinars-section {
+        padding: 60px 120px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .sources-hero {
+        height: 320px;
+        padding: 0 15px;
+    }
+    .sources-hero-content h1 {
+        font-size: 28px;
+    }
+    .sources-hero-content p {
+        font-size: 16px;
+    }
+    .tools-section {
+        padding: 50px 80px;
+    }
+    .tools-grid {
+        gap: 20px;
+    }
+    .tool-card {
+        padding: 20px;
+    }
+    .tool-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Calculator Popup Adjustments */
+    .calculator-content {
+        width: 90%;
+        max-width: 800px;
+        height: 80vh;
+        max-height: 600px;
+    }
+    .solar-basics-section {
+        padding: 50px 80px;
+    }
+    .solar-basics-grid {
+        gap: 20px;
+    }
+    .source-content {
+        padding: 15px;
+    }
+    .source-image {
+        height: 180px;
+    }
+    .solar-webinars-section {
+        padding: 50px 80px;
+    }
+    .solar-webinars-grid {
+        gap: 20px;
+    }
+    .solar-webinar-card .source-image {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sources-hero {
+        height: 300px;
+        padding: 0 10px;
+    }
+    .sources-hero-content h1 {
+        font-size: 26px;
+    }
+    .sources-hero-content p {
+        font-size: 15px;
+    }
+    .tools-section {
+        padding: 40px 40px;
+    }
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    /* Calculator Popup Adjustments */
+    .calculator-body {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .calculator-left, 
+    .calculator-right {
+        width: 100%;
+        border-right: none;
+    }
+    .calculator-right {
+        border-top: 1px solid var(--border-color);
+    }
+    .form-sections {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Energy Calculator Popup Adjustments */
+    .calculator-popup#energyCalculator .calculator-body {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    
+    .calculator-popup#energyCalculator .calculator-left,
+    .calculator-popup#energyCalculator .calculator-right {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+    }
+    
+    .calculator-popup#energyCalculator .calculator-right {
+        border-top: 1px solid var(--border-color);
+    }
+
+    /* Environmental Calculator Popup Adjustments */
+    .calculator-popup#environmentalCalculator .calculator-body {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    
+    .calculator-popup#environmentalCalculator .calculator-left,
+    .calculator-popup#environmentalCalculator .calculator-right {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+    }
+    
+    .calculator-popup#environmentalCalculator .calculator-right {
+        border-top: 1px solid var(--border-color);
+    }
+
+    /* Optimize space for calculator results on smaller screens */
+    .calculator-body {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .calculator-left {
+        width: 100%;
+        height: 60%; /* Adjust space distribution */
+        border-right: none;
+        overflow-y: auto;
+    }
+
+    .calculator-right {
+        width: 100%;
+        height: 40%; /* Adjust space distribution */
+        border-top: 1px solid var(--border-color);
+        overflow-y: auto;
+    }
+
+    /* Make results more compact */
+    .calculator-results {
+        padding: 12px;
+    }
+
+    .result-group {
+        margin-bottom: 12px;
+    }
+
+    .result-group h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+    }
+
+    .result-item {
+        padding: 8px 0;
+        margin-bottom: 8px;
+    }
+
+    /* Apply to all calculator popups */
+    .calculator-popup#roiCalculator .calculator-left,
+    .calculator-popup#energyCalculator .calculator-left,
+    .calculator-popup#environmentalCalculator .calculator-left {
+        height: 60%;
+    }
+
+    .calculator-popup#roiCalculator .calculator-right,
+    .calculator-popup#energyCalculator .calculator-right,
+    .calculator-popup#environmentalCalculator .calculator-right {
+        height: 40%;
+    }
+
+    .solar-basics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Update to use minmax */
+        gap: 15px;
+    }
+
+    .solar-basics-card {
+        height: 100%; /* Ensure all cards have same height */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100%;
+    }
+
+    .source-image {
+        height: 160px;
+        width: 100%;
+    }
+
+    .source-content {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .source-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .info-row {
+        margin-top: auto; /* Push info-row to bottom of details */
+    }
+    .solar-basics-section {
+        padding: 40px 40px;
+    }
+    .solar-basics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Update to use minmax */
+        gap: 15px;
+    }
+    .source-image {
+        height: 160px;
+    }
+    .source-content h3 {
+        font-size: var(--font-size-md);
+    }
+    .info-row {
+        padding: 10px 0;
+    }
+    .source-detail-item {
+        padding: 6px 10px;
+    }
+    .solar-webinars-section {
+        padding: 40px 40px;
+    }
+    .solar-webinars-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+    .solar-webinar-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sources-hero {
+        height: 280px;
+        padding: 0 5px;
+    }
+    .sources-hero-content h1 {
+        font-size: 24px;
+    }
+    .sources-hero-content p {
+        font-size: 14px;
+    }
+    .tools-section {
+        padding: 30px 20px;
+    }
+    .section-header h2 {
+        font-size: var(--font-size-xl);
+    }
+    .section-header h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Calculator Popup Adjustments */
+    .calculator-mode-switch {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .mode-btn {
+        width: 100%;
+    }
+    .calculator-content {
+        height: 90vh;
+        border-radius: 15px;
+    }
+    .solar-basics-section {
+        padding: 30px 20px;
+    }
+    .solar-basics-grid {
+        margin-top: 30px;
+    }
+    .source-detail-item .text,
+    .source-detail-item .value {
+        font-size: var(--font-size-xs);
+    }
+    .source-detail-item .icon {
+        width: 28px;
+        height: 28px;
+    }
+    .solar-webinars-section {
+        padding: 30px 20px;
+    }
+    .solar-webinars-grid {
+        margin-top: 30px;
+    }
+    .solar-webinar-card .source-content h3 {
+        font-size: var(--font-size-md);
+    }
+    .source-detail-item {
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .calculator-content {
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    .calculator-popup#energyCalculator .calculator-content,
+    .calculator-popup#environmentalCalculator .calculator-content {
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .sources-hero {
+        height: 250px;
+        margin-top: -50px;
+    }
+    .sources-hero-content h1 {
+        font-size: 22px;
+    }
+    .sources-hero-content p {
+        font-size: 13px;
+    }
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    .tool-card {
+        padding: 15px;
+    }
+    .tool-features {
+        padding: 10px;
+    }
+    
+    /* Calculator Popup Adjustments */
+    .calculator-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .calculator-header {
+        padding: 10px 15px;
+    }
+    .form-section {
+        padding: 15px;
+    }
+    .result-group {
+        padding: 15px;
+    }
+    
+    /* Energy Calculator Popup Adjustments */
+    .calculator-popup#energyCalculator .calculator-content,
+    .calculator-popup#environmentalCalculator .calculator-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .calculator-popup#energyCalculator .form-section,
+    .calculator-popup#environmentalCalculator .form-section {
+        padding: 15px;
+    }
+
+    .calculator-popup#energyCalculator .result-group,
+    .calculator-popup#environmentalCalculator .result-group {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .calculator-popup#energyCalculator .calculator-left,
+    .calculator-popup#environmentalCalculator .calculator-left {
+        padding: 15px;
+    }
+    
+    .calculator-popup#energyCalculator .calculator-right,
+    .calculator-popup#environmentalCalculator .calculator-right {
+        padding: 15px;
+    }
+
+    /* Further optimize for very small screens */
+    .calculator-left {
+        height: 60%; /* Maintain 60/40 split */
+    }
+
+    .calculator-right {
+        height: 40%; /* Maintain 60/40 split */
+    }
+
+    .result-group h3 {
+        font-size: 12px;
+    }
+
+    .result-label {
+        font-size: 11px;
+    }
+
+    .result-value {
+        font-size: 12px;
+    }
+
+    /* Apply to all calculator popups */
+    .calculator-popup#roiCalculator .calculator-left,
+    .calculator-popup#energyCalculator .calculator-left,
+    .calculator-popup#environmentalCalculator .calculator-left {
+        height: 60%;
+    }
+
+    .calculator-popup#roiCalculator .calculator-right,
+    .calculator-popup#energyCalculator .calculator-right,
+    .calculator-popup#environmentalCalculator .calculator-right {
+        height: 40%;
+    }
+
+    .solar-basics-grid {
+        grid-template-columns: minmax(0, 1fr); /* Single column with minmax */
+    }
+
+    .solar-basics-card {
+        height: auto; /* Reset height for single column */
+        max-width: none; /* Remove max-width limitation */
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .source-image {
+        height: 200px; /* Consistent image height */
+    }
+
+    .source-content {
+        min-height: 200px; /* Minimum content height */
+        width: 100%;
+    }
+
+    .info-row {
+        margin-top: 15px; /* Consistent spacing */
+    }
+
+    .view-details {
+        margin-top: 15px; /* Consistent button spacing */
+    }
+    .solar-basics-grid {
+        grid-template-columns: minmax(0, 1fr); /* Single column with minmax */
+    }
+    .solar-basics-card {
+        max-width: none; /* Remove max-width limitation */
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+    .source-image {
+        height: 200px;
+    }
+    .source-content {
+        padding: 15px;
+        width: 100%;
+    }
+    .source-content h3 {
+        font-size: var(--font-size-md);
+        margin-bottom: 10px;
+    }
+    .info-row {
+        gap: 8px;
+    }
+    .solar-webinars-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .solar-webinar-card {
+        max-width: none;
+        margin: 0 auto 20px;
+    }
+    .solar-webinar-card .source-image {
+        height: 200px;
+    }
+    .solar-webinar-card .source-content {
+        padding: 15px;
+    }
+    .solar-webinar-card .info-row {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sources-hero {
+        height: 230px;
+    }
+    .sources-hero-content h1 {
+        font-size: 20px;
+    }
+    .sources-hero-content p {
+        font-size: 12px;
+    }
+    .solar-basics-card {
+        max-width: 100%;
+    }
+    .source-image {
+        height: 180px;
+    }
+    .source-detail-item {
+        padding: 5px 8px;
+    }
+    .source-detail-item .icon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+    .solar-webinar-card .source-image {
+        height: 180px;
+    }
+    .solar-webinar-card .source-content {
+        padding: 12px;
+    }
+    .solar-webinar-card .source-detail-item {
+        padding: 6px 8px;
+    }
+}

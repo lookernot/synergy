@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remove integrity and crossorigin from Font Awesome link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="detailsPage.css">
+   
+    <link rel="stylesheet" href="/css/base.css">
+    <!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Include Luxon for date handling -->
+<script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+<!-- Include Chart.js Luxon Adapter -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.2.0/dist/chartjs-adapter-luxon.min.js"></script>
+
+    <title>Project Details</title>
+  </head>
+  <body>
+    <header id="header"></header> <!-- This will be filled dynamically -->
+
+    <div class="details-body">
+    <section class="hero">
+      <div class="hero__title">
+        <h1>نیروگاه خورشیدی 10 مگاواتی اصفهان</h1>
+      </div>
+
+      <div class="hero__slider">
+        <div class="hero__slides">
+          <!-- Make sure these image paths are correct and images exist -->
+          <img src="assets/img/project/rof2.jpg" class="hero__slide active" alt="نیروگاه خورشیدی نما 1" />
+          <img src="assets/img/project/2.jpg" class="hero__slide" alt="نیروگاه خورشیدی نما 2" />
+          <img src="assets/img/project/3.jpg" class="hero__slide" alt="نیروگاه خورشیدی نما 3" />
+          <img src="assets/img/project/4.jpg" class="hero__slide" alt="نیروگاه خورشیدی نما 4" />
+          <img src="assets/img/project/5.jpg" class="hero__slide" alt="نیروگاه خورشیدی نما 5" />
+          <img src="assets/img/project/rof3h.jpg" class="hero__slide" alt="نیروگاه خورشیدی نما 6" />
+        </div>
+
+        <div class="hero__navigation">
+          <button class="hero__btn--prev">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+          <button class="hero__btn--next">
+          
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+      </div>
+      
+  
+    </section>
+    <div class="hero__dots-container">
+        <span class="hero__dot active"></span>
+        <span class="hero__dot"></span>
+        <span class="hero__dot"></span>
+        <span class="hero__dot"></span>
+        <span class="hero__dot"></span>
+        <span class="hero__dot"></span>
+      </div>
+
+
+      <section class="project__introduction">
+        <div class="project__introduction-container">
+            <p>
+                نیروگاه خورشیدی شرق اصفهان با ظرفیت ۱۰ مگاوات، با سرمایه‌گذاری مشترک شرکت و مشارکت مردمی تأسیس شده است.
+                این پروژه نمونه‌ای از همکاری مؤثر برای توسعه انرژی پاک و پایدار در کشور به شمار می‌رود.
+                نیروگاه با بهره‌گیری از فناوری‌های پیشرفته و پنل‌های خورشیدی باکیفیت فعالیت می‌کند.
+                هدف اصلی این پروژه کاهش آلایندگی محیط‌زیست و تأمین انرژی سبز برای منطقه است.
+                با توجه به منابع طبیعی منطقه، این نیروگاه نقش مهمی در آینده انرژی پایدار کشور دارد. </p>
+          </div>
+      </section>
+
+      <section class="economic-metrics">
+        <div class="economic-metrics-title">جزئیات اقتصادی نیروگاه</div>
+        <div class="economic-metrics-lists">
+          <div class="left-list">
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-dollar-sign icon"></i> کل سرمایه گذاری اولیه :</span>
+              <span class="value reverse-value">50 میلیارد تومان</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-chart-line icon"></i> ارزش خالص فعلی پروژه :</span>
+              <span class="value reverse-value">60 میلیارد تومان</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-coins icon"></i>درآمد سالانه :</span>
+              <span class="value reverse-value">15 میلیارد تومان</span>
+            </div>
+            
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-wrench icon"></i> هزینه سالانه :</span>
+              <span class="value reverse-value">500 میلیون تومان</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-percent icon"></i> نرخ تنزیل :</span>
+              <span class="value reverse-value">25%</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-percent icon"></i> نرخ بهره وام :</span>
+              <span class="value reverse-value">22%</span>
+            </div>
+          </div>
+          
+          <div class="right-list">
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-chart-bar icon"></i> تعداد سهم :</span>
+              <span class="value reverse-value">2 میلیون</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-dollar-sign icon"></i> ارزش فعلی هر سهم :</span>
+              <span class="value reverse-value">30 هزار تومان</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-chart-pie icon"></i> سود ناخالص :</span>
+              <span class="value reverse-value">14 میلیارد تومان</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-money-bill-wave icon"></i> سود خالص :</span>
+              <span class="value reverse-value">14 میلیارد تومان</span>
+            </div>
+            <div class="economic-detail-item">
+              <span class="text"><i class="fa-solid fa-arrow-trend-up icon"></i> نرخ تورم :</span>
+              <span class="value reverse-value">30%</span>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="key-metrics">
+        <div class="key-metrics-title">جزئیات فنی نیروگاه </div>
+        <div class="key-metrics-lists">
+          <div class="left-list">
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-industry icon"></i> کل ظرفیت :</span>
+              <span class="value reverse-value"><span class="number">20</span> <span class="unit">MW</span></span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-chart-line icon"></i> میزان انرژی تولیدی سالانه :</span>
+              <span class="value reverse-value"><span class="number">25,000</span> <span class="unit">MWh</span></span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-calendar-days icon"></i> میزان انرژی تولیدی از زمان تاسیس :</span>
+              <span class="value reverse-value"><span class="number">45,000</span> <span class="unit">MWh</span></span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-bolt icon"></i> میزان انرژی تولیدی این سال :</span>
+              <span class="value reverse-value"><span class="number">2,500</span> <span class="unit">MWh</span></span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-solar-panel icon"></i> نوع پنل ها :</span>
+              <span class="value">LG 561</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-plug icon"></i> پست برق :</span>
+              <span class="value reverse-value"><span class="number">63</span> <span class="unit">KV</span></span>
+            </div>
+          </div>
+          
+          <div class="right-list">
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-charging-station icon"></i> نوع اینورتر :</span>
+              <span class="value">ABB 1 MW</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-location-dot icon"></i> موقعیت :</span>
+              <span class="value">شرق اصفهان (منطقه کوهپایه)</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-cloud icon"></i> کاهش آلایندگی CO2 :</span>
+              <span class="value">1,000,000 تن (سالانه)</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-solar-panel icon"></i> تعداد پنل‌ها :</span>
+              <span class="value">1,000,000 پنل</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-chart-line icon"></i> میزان  صرفه‌جویی آب :</span>
+              <span class="value"> متر مکعب 10,000</span>
+            </div>
+            <div class="project-detail-item">
+              <span class="text"><i class="fa-solid fa-industry icon"></i> ظرفیت آینده :</span>
+              <span class="value reverse-value"><span class="number">50</span> <span class="unit">MW</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="charts">
+          <!-- First row - Keep unchanged -->
+          <div class="charts-row">
+              <div id="power-gauge" class="chart-container">
+                  <div id="production-capacity-momentContainer"></div>
+              </div>
+              <div id="production-chart" class="chart-container">
+                  <div id="production-capacityContainer"></div>
+              </div>
+          </div>
+
+          <!-- Second row - CO2 and ROI -->
+          <div class="charts-row">
+              <div id="co2-impact-section" class="chart-container">
+                  <div id="co2Container"></div>
+              </div>
+              <div id="roi-section" class="chart-container">
+                  <div id="ROIContainer"></div>
+              </div>
+          </div>
+
+          <!-- Third row - Shareholders -->
+          <div class="charts-row">
+              <div id="share-holders-section" class="chart-container">
+                  <div id="share-holdersContainer"></div>
+              </div>
+          </div>
+      </section>      
+
+
+
+
+
+</div>
+<footer id="footer"></footer> <!-- This will be filled dynamically -->
+    <!-- Add defer so the script runs after DOM is ready -->
+    <script src="detailsPage.js" defer></script>
+  </body>
+</html>

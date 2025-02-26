@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header Section</title>
+    <link rel="stylesheet" href="/public/css/sections/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="/public/js/sections/header.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger-menu" id="hamburgerBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <ul>
+            <li><a href="/public/pages/home.html">خانه</a></li>
+            <li><a href="/public/pages/projects.html">پروژه ها</a></li>
+            <li>
+              <a href="/public/pages/investment-guide.html"
+                >راهنمای سرمایه گذاری</a
+              >
+            </li>
+            <li><a href="/public/pages/about-us.html">درباره ما</a></li>
+            <li><a href="/public/pages/sources.html">منابع</a></li>
+            <li><a href="/public/pages/blog.html">وبلاگ</a></li>
+            <li><a href="/public/pages/contact.html">تماس با ما</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="logo">
+        <a href="/html/pages/home.html">
+          <img
+            src="/public/img/logo/logoSynergy.png"
+            alt="Company Logo"
+            class="logo-image"
+          />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/public/pages/home.html">خانه</a></li>
+
+          <li class="dropdown">
+            <a href="/public/pages/projects.html">پروژه ها</a>
+            <div class="dropdown-content projects-dropdown">
+              <div class="dropdown-main">
+                <div class="dropdown-item">
+                  <a href="/public/pages/projects.html#running-projects">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="dropdown-item-title">
+                          پروژه های در حال اجرا
+                        </div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          مشاهده پروژه های فعال و در حال پیشرفت
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/projects.html#completed-projects">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="dropdown-item-title">
+                          پروژه های تکمیل شده
+                        </div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          مشاهده پروژه های موفق و به پایان رسیده
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/projects.html#funding-projects">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="dropdown-item-title">
+                          پروژه های در حال تامین مالی
+                        </div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          مشارکت در تامین مالی پروژه های جدید
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="/public/pages/investment-guide.html"
+              >راهنمای سرمایه گذاری</a
+            >
+            <div class="dropdown-content investment-guide-dropdown">
+              <!-- <div class="dropdown-sidebar">
+                            <div class="sidebar-item">
+                                <i class="fas fa-question-circle sidebar-icon"></i>
+                                <div class="sidebar-text">سوالات متداول سرمایه گذاری</div>
+                            </div> 
+                             <div class="sidebar-item">
+                                <i class="fas fa-chart-bar sidebar-icon"></i>
+                                <div class="sidebar-text">گزارش ها و رصد عملکرد</div>
+                            </div>
+                            <div class="sidebar-item">
+                                <i class="fas fa-hand-holding-usd sidebar-icon"></i>
+                                <div class="sidebar-text">مشوق های مالی و حمایتی</div>
+                            </div>
+                        </div> -->
+              <div class="dropdown-main">
+                <div class="dropdown-item">
+                  <a
+                    href="/public/pages/investment-guide.html#registration-section"
+                  >
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="dropdown-item-title">
+                          مراحل ثبت نام و احراز هویت
+                        </div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          راهنمای کامل ثبت نام و تایید هویت
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a
+                    href="/public/pages/investment-guide.html#purchase-guide-section"
+                  >
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="dropdown-item-title">نحوه خرید سهام</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          آموزش گام به گام خرید سهام
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a
+                    href="/public/pages/investment-guide.html#share-structure-section"
+                  >
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="dropdown-item-title">ساختار سهام و سود</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          اطلاعات جامع درباره سهام و سود
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a
+                    href="/public/pages/investment-guide.html#risks-benefits-section"
+                  >
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="dropdown-item-title">ریسک و مزایا</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          بررسی ریسک ها و مزایای سرمایه گذاری
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/investment-guide.html#faq-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-question-circle sidebar-icon"></i>
+                        </div>
+                        <div class="dropdown-item-title">سوالات متداول</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          سوالات متداول سرمایه گذاری
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="/public/pages/about-us.html">درباره ما</a>
+            <div class="dropdown-content about-dropdown">
+              <div class="dropdown-main">
+                <div class="dropdown-item">
+                  <a href="/public/pages/about-us.html#intro-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-building"></i>
+                        </div>
+                        <div class="dropdown-item-title">معرفی شرکت</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          آشنایی با سینرژی و دستاوردهای ما
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/about-us.html#vision-mission-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-compass"></i>
+                        </div>
+                        <div class="dropdown-item-title">مسیر و اهداف</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          چشم‌انداز و ماموریت سازمانی
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/about-us.html#team-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-users"></i>
+                        </div>
+                        <div class="dropdown-item-title">تیم ما</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          آشنایی با متخصصان و مدیران مجموعه
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/about-us.html#careers-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="dropdown-item-title">فرصت های شغلی</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          مشاهده موقعیت‌های شغلی و همکاری با ما
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/about-us.html#values-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <div class="dropdown-item-title">ارزش‌های ما</div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          ارزش‌های بنیادین و اصول کاری
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="/public/pages/sources.html">منابع</a>
+            <div class="dropdown-content resources-dropdown">
+              <div class="dropdown-main">
+                <div class="dropdown-item">
+                  <a href="/public/pages/sources.html#tools-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="dropdown-item-title">
+                          ابزارهای سرمایه‌گذاری
+                        </div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          محاسبه‌گرها و کالکولاتورهای تخصصی
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/sources.html#basics-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div class="dropdown-item-title">
+                          مبانی انرژی خورشیدی
+                        </div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          آشنایی با اصول و مفاهیم پایه انرژی خورشیدی
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="dropdown-item">
+                  <a href="/public/pages/sources.html#webinars-section">
+                    <div class="dropdown-item-content">
+                      <div class="dropdown-item-title-wrapper">
+                        <div class="title-icon">
+                          <i class="fas fa-video"></i>
+                        </div>
+                        <div class="dropdown-item-title">
+                          وبینار ها و آموزش ها
+                        </div>
+                      </div>
+                      <div class="dropdown-item-caption-wrapper">
+                        <div class="dropdown-item-caption">
+                          دوره های آموزشی و وبینارهای تخصصی
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="/public/pages/blog.html">وبلاگ</a>
+            <div class="dropdown-content blog-dropdown">
+              <div class="blog-latest">
+                <h3>آخرین مقالات</h3>
+                <div class="blog-preview">
+                  <div class="blog-preview-item">
+                    <img
+                      src="/public/img/blogImage/blog1.jpg"
+                      alt="نوآوری‌های خورشیدی"
+                    />
+                    <div class="blog-preview-content">
+                      <h4>نوآوری‌های خورشیدی سال ۲۰۲۴</h4>
+                      <p>فناوری‌هایی که آینده خورشیدی را بازتعریف می‌کنند...</p>
+                      <span class="blog-date">۲ ساعت پیش</span>
+                    </div>
+                  </div>
+                  <div class="blog-preview-item">
+                    <img
+                      src="/public/img/blogImage/blog2.jpg"
+                      alt="مشوق‌های دولتی"
+                    />
+                    <div class="blog-preview-content">
+                      <h4>مشوق‌های دولتی انرژی خورشیدی</h4>
+                      <p>بررسی تأثیر حمایت‌های دولتی بر توسعه انرژی پاک...</p>
+                      <span class="blog-date">دیروز</span>
+                    </div>
+                  </div>
+                  <a href="/public/pages/blog.html" class="blog-preview-more"
+                    >مشاهده همه مقالات <i class="fas fa-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="blog-categories">
+                <h3>دسته بندی</h3>
+                <ul>
+                  <li><a href="/public/pages/blog.html#all">همه مقالات</a></li>
+                  <li>
+                    <a href="/public/pages/blog.html#news">اخبار و رویدادها</a>
+                  </li>
+                  <li>
+                    <a href="/public/pages/blog.html#tech">تکنولوژی و نوآوری</a>
+                  </li>
+                  <li>
+                    <a href="/public/pages/blog.html#investment"
+                      >راهنمای سرمایه گذاری</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/public/pages/blog.html#environment">محیط زیست</a>
+                  </li>
+                  <li>
+                    <a href="/public/pages/blog.html#analysis"
+                      >گزارش های تحلیلی</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="blog-more">
+                <h3>بیشتر</h3>
+                <ul>
+                  <li>
+                    <a href="/public/pages/blog.html#newsletter"
+                      ><i class="fas fa-envelope"></i> عضویت در خبرنامه</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/public/pages/blog.html#archive"
+                      ><i class="fas fa-archive"></i> آرشیو مقالات</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="/public/pages/contact.html">تماس با ما</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="auth-button-container">
+        <div class="auth-icon">
+          <i class="fas fa-sign-in-alt"></i>
+        </div>
+        <div class="auth-text">ورود | ثبت نام</div>
+      </div>
+    </header>
+  </body>
+</html>

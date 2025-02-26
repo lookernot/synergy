@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وبلاگ - سینرژی</title>
+    <link rel="stylesheet" href="/public/css/sections/header.css" />
+    <link rel="stylesheet" href="/public/css/sections/footer.css" />
+    <link rel="stylesheet" href="/public/fonts/fonts.css" />
+    <link rel="stylesheet" href="/public/css/pages/blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+      <div class="blog-hero-content">
+        <h1>مقالات و اخبار</h1>
+        <p>آخرین اخبار و مقالات تخصصی در حوزه انرژی خورشیدی</p>
+      </div>
+    </section>
+
+    <!-- Categories Section - Moved to top -->
+    <section class="blog-categories-section">
+      <div class="section-content">
+        <div class="categories-grid">
+          <a href="#all" class="category-card" data-category="all">
+            <i class="fas fa-th-large"></i>
+            <h3>همه مقالات</h3>
+            <span class="post-count">۷۸ مقاله</span>
+          </a>
+          <a href="#news" class="category-card" data-category="news">
+            <i class="fas fa-newspaper"></i>
+            <h3>اخبار و رویدادها</h3>
+            <span class="post-count">۲۴ مقاله</span>
+          </a>
+          <a href="#tech" class="category-card" data-category="tech">
+            <i class="fas fa-microchip"></i>
+            <h3>تکنولوژی و نوآوری</h3>
+            <span class="post-count">۱۸ مقاله</span>
+          </a>
+          <a
+            href="#investment"
+            class="category-card"
+            data-category="investment"
+          >
+            <i class="fas fa-chart-line"></i>
+            <h3>راهنمای سرمایه گذاری</h3>
+            <span class="post-count">۱۵ مقاله</span>
+          </a>
+          <a
+            href="#environment"
+            class="category-card"
+            data-category="environment"
+          >
+            <i class="fas fa-leaf"></i>
+            <h3>محیط زیست</h3>
+            <span class="post-count">۱۲ مقاله</span>
+          </a>
+          <a href="#analysis" class="category-card" data-category="analysis">
+            <i class="fas fa-chart-bar"></i>
+            <h3>گزارش های تحلیلی</h3>
+            <span class="post-count">۹ مقاله</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Articles Section - Updated to 4 cards -->
+    <section class="featured-posts">
+      <div class="section-content">
+        <h2 class="section-title">همه مقالات</h2>
+        <div class="featured-grid">
+          <!-- News & Events Category -->
+          <article class="featured-post" data-category="news">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="رویداد انرژی خورشیدی"
+              />
+              <div class="post-category news">اخبار و رویدادها</div>
+            </div>
+            <div class="post-content">
+              <h3>برگزاری نمایشگاه بین‌المللی انرژی خورشیدی ۲۰۲۴</h3>
+              <p>
+                گزارش کامل از بزرگترین رویداد صنعت انرژی خورشیدی در خاورمیانه...
+              </p>
+              <div class="post-meta">
+                <span class="post-date">۱ هفته پیش</span>
+                <span class="read-time">۸ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <article class="featured-post" data-category="news">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="همایش انرژی پاک"
+              />
+              <div class="post-category news">اخبار و رویدادها</div>
+            </div>
+            <div class="post-content">
+              <h3>همایش سالانه فناوری‌های نوین انرژی پاک</h3>
+              <p>گزارش تصویری از برگزاری همایش فناوری‌های نوین انرژی پاک...</p>
+              <div class="post-meta">
+                <span class="post-date">۲ هفته پیش</span>
+                <span class="read-time">۶ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <!-- Technology Category -->
+          <article class="featured-post" data-category="tech">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="نوآوری‌های خورشیدی"
+              />
+              <div class="post-category technology">تکنولوژی و نوآوری</div>
+            </div>
+            <div class="post-content">
+              <h3>نوآوری‌های خورشیدی سال ۲۰۲۴</h3>
+              <p>فناوری‌هایی که آینده خورشیدی را بازتعریف می‌کنند...</p>
+              <div class="post-meta">
+                <span class="post-date">۲ ساعت پیش</span>
+                <span class="read-time">۱۰ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <article class="featured-post" data-category="tech">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="ذخیره‌سازی انرژی"
+              />
+              <div class="post-category technology">تکنولوژی و نوآوری</div>
+            </div>
+            <div class="post-content">
+              <h3>پیشرفت‌های جدید در باتری‌های خورشیدی</h3>
+              <p>آخرین دستاوردها در زمینه ذخیره‌سازی انرژی خورشیدی...</p>
+              <div class="post-meta">
+                <span class="post-date">۴ روز پیش</span>
+                <span class="read-time">۹ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <!-- Investment Guides -->
+          <article class="featured-post" data-category="investment">
+            <div class="post-image">
+              <img src="/public/img/blogImage/blog1.jpg" alt="مشوق‌های دولتی" />
+              <div class="post-category investment">راهنمای سرمایه گذاری</div>
+            </div>
+            <div class="post-content">
+              <h3>مشوق‌های دولتی انرژی خورشیدی</h3>
+              <p>بررسی تأثیر حمایت‌های دولتی بر توسعه انرژی پاک...</p>
+              <div class="post-meta">
+                <span class="post-date">دیروز</span>
+                <span class="read-time">۷ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <article class="featured-post" data-category="investment">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="تامین مالی پروژه‌ها"
+              />
+              <div class="post-category investment">راهنمای سرمایه گذاری</div>
+            </div>
+            <div class="post-content">
+              <h3>روش‌های تامین مالی نیروگاه‌های خورشیدی</h3>
+              <p>بررسی انواع روش‌های تامین سرمایه برای پروژه‌های خورشیدی...</p>
+              <div class="post-meta">
+                <span class="post-date">۵ روز پیش</span>
+                <span class="read-time">۱۱ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <!-- Environment Category -->
+          <article class="featured-post" data-category="environment">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="کاهش آلودگی هوا"
+              />
+              <div class="post-category environment">محیط زیست</div>
+            </div>
+            <div class="post-content">
+              <h3>تاثیر نیروگاه‌های خورشیدی بر کاهش آلودگی هوا</h3>
+              <p>بررسی نقش انرژی خورشیدی در بهبود کیفیت هوا...</p>
+              <div class="post-meta">
+                <span class="post-date">۲ روز پیش</span>
+                <span class="read-time">۸ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <article class="featured-post" data-category="environment">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="پایداری محیط زیست"
+              />
+              <div class="post-category environment">محیط زیست</div>
+            </div>
+            <div class="post-content">
+              <h3>تاثیر انرژی خورشیدی بر کاهش ردپای کربن</h3>
+              <p>
+                بررسی نقش نیروگاه‌های خورشیدی در کاهش انتشار گازهای گلخانه‌ای...
+              </p>
+              <div class="post-meta">
+                <span class="post-date">۶ روز پیش</span>
+                <span class="read-time">۷ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <!-- Analysis Reports -->
+          <article class="featured-post" data-category="analysis">
+            <div class="post-image">
+              <img src="/public/img/blogImage/blog1.jpg" alt="گزارش بازار" />
+              <div class="post-category analysis">گزارش تحلیلی</div>
+            </div>
+            <div class="post-content">
+              <h3>تحلیل بازار انرژی خورشیدی در سال ۲۰۲۴</h3>
+              <p>بررسی روند رشد و چشم‌انداز بازار انرژی خورشیدی...</p>
+              <div class="post-meta">
+                <span class="post-date">۳ روز پیش</span>
+                <span class="read-time">۱۲ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+
+          <article class="featured-post" data-category="analysis">
+            <div class="post-image">
+              <img
+                src="/public/img/blogImage/blog1.jpg"
+                alt="تحلیل روند بازار"
+              />
+              <div class="post-category analysis">گزارش تحلیلی</div>
+            </div>
+            <div class="post-content">
+              <h3>پیش‌بینی بازار انرژی خورشیدی تا سال ۲۰۳۰</h3>
+              <p>تحلیل روندها و پیش‌بینی آینده صنعت انرژی خورشیدی...</p>
+              <div class="post-meta">
+                <span class="post-date">۱ هفته پیش</span>
+                <span class="read-time">۱۵ دقیقه مطالعه</span>
+              </div>
+              <a href="#" class="read-more">ادامه مطلب</a>
+            </div>
+          </article>
+        </div>
+        <!-- end of featured-grid -->
+        <button class="load-more-btn">
+          <span>مشاهده مطالب بیشتر</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="section-content">
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h2>عضویت در خبرنامه</h2>
+            <p>برای دریافت آخرین اخبار و مقالات در خبرنامه ما عضو شوید</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="ایمیل خود را وارد کنید..." />
+              <button type="submit">عضویت</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="/public/js/pages/blog.js"></script>
+  </body>
+</html>

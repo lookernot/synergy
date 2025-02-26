@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه های سرمایه گذاری | Synergy</title>
+    <link rel="stylesheet" href="/public/css/pages/projects.css">
+    <link rel="stylesheet" href="/public/css/sections/header.css">
+    <link rel="stylesheet" href="/public/css/sections/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/public/fonts/fonts.css">
+    <script defer src="/public/js/pages/projects.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="projects-hero" style="background-image: linear-gradient(rgba(15, 92, 168, 0.6), rgba(15, 92, 168, 0.4)), url('/public/img/project/4.jpg');">
+        <div class="projects-hero-content">
+            <h1>پروژه‌ها</h1>
+            <p>مشارکت در ساخت آینده‌ای پایدار با سرمایه‌گذاری در پروژه‌های انرژی خورشیدی</p>
+        </div>
+    </section>
+
+    <section class="projects-filter">
+        <div class="filter-container">
+            <div class="project-types">
+                <button class="project-type-btn">
+                    <i class="fas fa-tools"></i>
+                    پروژه های در حال اجرا
+                </button>
+                <button class="project-type-btn">
+                    <i class="fas fa-trophy"></i>
+                    پروژه های تکمیل شده
+                </button>
+                <button class="project-type-btn">
+                    <i class="fas fa-chart-line"></i>
+                    پروژه های در حال تامین مالی
+                </button>
+            </div>
+            <button class="filter-toggle-btn">
+                <i class="fas fa-filter"></i>
+                فیلترها
+            </button>
+        </div>
+
+        <div class="filter-popup" id="filterPopup">
+            <div class="filter-popup-content">
+                <div class="filter-popup-header">
+                    <h3>فیلتر پروژه‌ها</h3>
+                    <button class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="filter-section">
+                    <h4>منطقه جغرافیایی</h4>
+                    <div class="location-select">
+                        <div class="select-box" id="locationSelect">
+                            <div class="selected-option">
+                                <span>انتخاب شهرها</span>
+                                <div class="selected-count"></div>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="options-container">
+                                <div class="search-box">
+                                    <input type="text" placeholder="جستجوی شهر...">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="option select-all">
+                                    <label>
+                                        <input type="checkbox" value="all">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="option-text">همه شهرها</span>
+                                    </label>
+                                </div>
+                                <div class="options-list">
+                                    <!-- Previous city options now with checkboxes -->
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="tehran">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">تهران</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="isfahan">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">اصفهان</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="mashhad">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">مشهد</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="tabriz">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">تبریز</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="shiraz">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">شیراز</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="yazd">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">یزد</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="kerman">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">کرمان</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="ahvaz">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">اهواز</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="qom">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">قم</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="kermanshah">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">کرمانشاه</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="urmia">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">ارومیه</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="rasht">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">رشت</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="zahedan">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">زاهدان</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="hamadan">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">همدان</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="arak">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">اراک</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="ardabil">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">اردبیل</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="bandarabbas">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">بندرعباس</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="qazvin">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">قزوین</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="karaj">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">کرج</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="sanandaj">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">سنندج</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="gorgan">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">گرگان</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="sari">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">ساری</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="semnan">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">سمنان</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="bushehr">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">بوشهر</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="ilam">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">ایلام</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="birjand">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">بیرجند</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="bojnord">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">بجنورد</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="yasuj">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">یاسوج</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="zanjan">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">زنجان</span>
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <label>
+                                            <input type="checkbox" value="shahrekord">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="option-text">شهرکرد</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h4>محدوده ظرفیت (مگاوات)</h4>
+                    <div class="price-inputs">
+                        <div class="price-input">
+                            <label>حداقل ظرفیت</label>
+                            <input type="number" min="0" value="10">
+                        </div>
+                        <div class="price-input">
+                            <label>حداکثر ظرفیت</label>
+                            <input type="number" min="0" value="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h4>محدوده سرمایه‌گذاری</h4>
+                    <div class="price-inputs">
+                        <div class="price-input">
+                            <label>حداقل (میلیون تومان)</label>
+                            <input type="number" min="0" value="5">
+                        </div>
+                        <div class="price-input">
+                            <label>حداکثر (میلیون تومان)</label>
+                            <input type="number" min="0" value="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="apply-filters">اعمال فیلترها</button>
+                    <button class="reset-filters">پاک کردن</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Running Projects Section -->
+
+    <section class="project-section" id="running-projects">
+        <h2 class="section-title">پروژه‌های در حال اجرا</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/public/img/project/2.jpg" alt="نیروگاه خورشیدی">
+                    <span class="project-status running">در حال اجرا</span>
+                </div>
+                <div class="project-content">
+                    <h3>نیروگاه خورشیدی ۲۰ مگاواتی یزد</h3>
+                    <div class="project-details">
+                        <div class="info-row">
+                            <div class="invest-detail-item project-capacity">
+                                <div class="icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="text">کل ظرفیت :</span>
+                                <span class="value">15MW</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span class="text">پیش‌بینی سود سالانه :</span>
+                                <span class="value">35٪</span>
+                            </div>
+
+
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span class="text">موقعیت  :</span>
+                                <span class="value">یزد</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <span class="text">حداقل سرمایه :</span>
+                                <span class="value">5 میلیون</span>
+                            </div>
+                          
+                        </div>
+                        
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                        <span class="progress-text">۶۰٪ تکمیل</span>
+                    </div>
+                    <a href="#" class="view-details">مشاهده جزئیات</a>
+                </div>
+            </div>
+            <!-- Second Project Card -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/public/img/project/3.jpg" alt="نیروگاه خورشیدی">
+                    <span class="project-status running">در حال اجرا</span>
+                </div>
+                <div class="project-content">
+                    <h3>نیروگاه خورشیدی ۱۵ مگاواتی مشهد</h3>
+                    <div class="project-details">
+                        <div class="info-row">
+                            <div class="invest-detail-item project-capacity">
+                                <div class="icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="text">کل ظرفیت :</span>
+                                <span class="value">15MW</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span class="text">پیش‌بینی سود سالانه :</span>
+                                <span class="value">32٪</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span class="text">موقعیت  :</span>
+                                <span class="value">مشهد</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <span class="text">حداقل سرمایه :</span>
+                                <span class="value">7 میلیون</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                        <span class="progress-text">۴۵٪ تکمیل</span>
+                    </div>
+                    <a href="#" class="view-details">مشاهده جزئیات</a>
+                </div>
+            </div>
+
+            <!-- Third Project Card -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/public/img/project/4.jpg" alt="نیروگاه خورشیدی">
+                    <span class="project-status running">در حال اجرا</span>
+                </div>
+                <div class="project-content">
+                    <h3>نیروگاه خورشیدی ۲۵ مگاواتی شیراز</h3>
+                    <div class="project-details">
+                        <div class="info-row">
+                            <div class="invest-detail-item project-capacity">
+                                <div class="icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="text">کل ظرفیت :</span>
+                                <span class="value">25MW</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span class="text">پیش‌بینی سود سالانه :</span>
+                                <span class="value">38٪</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span class="text">موقعیت  :</span>
+                                <span class="value">شیراز</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <span class="text">حداقل سرمایه :</span>
+                                <span class="value">10 میلیون</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                        <span class="progress-text">۷۵٪ تکمیل</span>
+                    </div>
+                    <a href="#" class="view-details">مشاهده جزئیات</a>
+                </div>
+            </div>
+        </div>
+        <button class="view-more-btn">
+            <span>مشاهده بیشتر</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </section>
+
+    <!-- Completed Projects Section -->
+    <section class="project-section" id="completed-projects">
+        <h2 class="section-title">پروژه‌های تکمیل شده</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/public/img/project/3.jpg" alt="نیروگاه خورشیدی">
+                    <span class="project-status completed">تکمیل شده</span>
+                </div>
+                <div class="project-content">
+                    <h3>نیروگاه خورشیدی ۱۰ مگاواتی اصفهان</h3>
+                    <div class="project-details">
+                        <div class="info-row">
+                            <div class="invest-detail-item project-capacity">
+                                <div class="icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="text">کل ظرفیت :</span>
+                                <span class="value">15 MW</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <span class="text">قیمت هر واحد :</span>
+                                <span class="value">20 میلیون تومان</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span class="text">پیش‌بینی سود سالانه :</span>
+                                <span class="value">30٪</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="text">دوره بازگشت سرمایه :</span>
+                                <span class="value">30 ماه</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shares-bar">
+                        <div class="shares-progress" style="width: 98%"></div>
+                        <span class="shares-text">۹۸٪ فروخته شده</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                        <span class="progress-text">تکمیل شده</span>
+                    </div>
+                    <a href="#" class="view-details">مشاهده جزئیات</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/public/img/project/5.jpg" alt="نیروگاه خورشیدی">
+                    <span class="project-status completed">تکمیل شده</span>
+                </div>
+                <div class="project-content">
+                    <h3>نیروگاه خورشیدی ۸ مگاواتی کرمان</h3>
+                    <div class="project-details">
+                        <div class="info-row">
+                            <div class="invest-detail-item project-capacity">
+                                <div class="icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="text">کل ظرفیت :</span>
+                                <span class="value">15 MW</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <span class="text">قیمت هر واحد :</span>
+                                <span class="value">20 میلیون تومان</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span class="text">پیش‌بینی سود سالانه :</span>
+                                <span class="value">30٪</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="text">دوره بازگشت سرمایه :</span>
+                                <span class="value">30 ماه</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shares-bar">
+                        <div class="shares-progress" style="width: 95%"></div>
+                        <span class="shares-text">۹۵٪ فروخته شده</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                        <span class="progress-text">تکمیل شده</span>
+                    </div>
+                    <a href="#" class="view-details">مشاهده جزئیات</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/public/img/project/3.jpg" alt="نیروگاه خورشیدی">
+                    <span class="project-status completed">تکمیل شده</span>
+                </div>
+                <div class="project-content">
+                    <h3>نیروگاه خورشیدی ۱۲ مگاواتی تبریز</h3>
+                    <div class="project-details">
+                        <div class="info-row">
+                            <div class="invest-detail-item project-capacity">
+                                <div class="icon">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="text">کل ظرفیت :</span>
+                                <span class="value">15 MW</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <span class="text">قیمت هر واحد :</span>
+                                <span class="value">20 میلیون تومان</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span class="text">پیش‌بینی سود سالانه :</span>
+                                <span class="value">30٪</span>
+                            </div>
+                            <div class="invest-detail-item">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="text">دوره بازگشت سرمایه :</span>
+                                <span class="value">30 ماه</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shares-bar">
+                        <div class="shares-progress" style="width: 92%"></div>
+                        <span class="shares-text">۹۲٪ فروخته شده</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                        <span class="progress-text">تکمیل شده</span>
+                    </div>
+                    <a href="#" class="view-details">مشاهده جزئیات</a>
+                </div>
+            </div>
+        </div>
+        <button class="view-more-btn">
+            <span>مشاهده بیشتر</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </section>
+
+    <!-- Funding Projects Section -->
+
+    <section class="project-section" id="funding-projects">
+    <h2 class="section-title">پروژه‌های در حال تامین مالی</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="/public/img/project/rof3h.jpg" alt="نیروگاه خورشیدی">
+                <span class="project-status funding">در حال تامین مالی</span>
+            </div>
+            <div class="project-content">
+                <h3>نیروگاه خورشیدی ۳۰ مگاواتی اصفهان</h3>
+                <div class="project-details">
+                    <div class="info-row">
+                        <div class="invest-detail-item project-capacity">
+                            <div class="icon">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <span class="text">کل ظرفیت :</span>
+                            <span class="value">30 MW</span>
+                        </div>
+                        <div class="invest-detail-item">
+                            <div class="icon">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <span class="text">قیمت هر واحد :</span>
+                            <span class="value">15 میلیون تومان</span>
+                        </div>
+                        <div class="invest-detail-item">
+                            <div class="icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span class="text">پیش‌بینی سود سالانه :</span>
+                            <span class="value">38٪</span>
+                        </div>
+                        <div class="invest-detail-item">
+                            <div class="icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span class="text">مهلت سرمایه‌گذاری :</span>
+                            <span class="value">15 روز</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shares-bar">
+                    <div class="shares-progress" style="width: 45%"></div>
+                    <span class="shares-text">۴۵٪ تامین شده</span>
+                </div>
+                <div class="funding-goal">
+                    <span class="goal-text">هدف: 50 میلیارد تومان</span>
+                    <span class="raised-text">تامین شده: 22.5 میلیارد تومان</span>
+                </div>
+                <a href="#" class="view-details">مشارکت در پروژه</a>
+            </div>
+        </div>
+
+        <!-- Second Funding Project -->
+        <div class="project-card">
+    <div class="project-image">
+        <img src="/public/img/project/rof2.jpg" alt="نیروگاه خورشیدی">
+        <span class="project-status funding">در حال تامین مالی</span>
+    </div>
+    <div class="project-content">
+        <h3>نیروگاه خورشیدی ۲۵ مگاواتی کرمان</h3>
+        <div class="project-details">
+            <div class="info-row">
+                <div class="invest-detail-item project-capacity">
+                    <div class="icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <span class="text">کل ظرفیت :</span>
+                    <span class="value">25 MW</span>
+                </div>
+                <div class="invest-detail-item">
+                    <div class="icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <span class="text">قیمت هر واحد :</span>
+                    <span class="value">18 میلیون تومان</span>
+                </div>
+                <div class="invest-detail-item">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span class="text">پیش‌بینی سود سالانه :</span>
+                    <span class="value">35٪</span>
+                </div>
+                <div class="invest-detail-item">
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <span class="text">مهلت سرمایه‌گذاری :</span>
+                    <span class="value">20 روز</span>
+                </div>
+            </div>
+        </div>
+        <div class="shares-bar">
+            <div class="shares-progress" style="width: 65%"></div>
+            <span class="shares-text">۶۵٪ تامین شده</span>
+        </div>
+        <div class="funding-goal">
+            <span class="goal-text">هدف: 35 میلیارد تومان</span>
+            <span class="raised-text">تامین شده: 22.75 میلیارد تومان</span>
+        </div>
+        <a href="#" class="view-details">مشارکت در پروژه</a>
+    </div>
+</div>
+
+        <!-- Third Funding Project -->
+        <!-- <div class="project-card"> -->
+            <!-- Similar structure with different data -->
+            <!-- ...Copy the above card structure and change the values... -->
+            <!-- Funding progress: 25%, Goal: 45 میلیارد -->
+        <!-- </div> -->
+    </div>
+    <!-- <button class="view-more-btn">
+        <span>مشاهده بیشتر</span>
+        <i class="fas fa-chevron-down"></i>
+    </button> -->
+    </section>
+
+<!-- Project Timeline Section -->
+<section class="timeline-section"> 
+    <h2 class="section-title">جدول زمانی پروژه (۱ سال)</h2>
+    <div class="timeline-container">
+        <div class="timeline-items">
+    <div class="timeline-item">
+        <div class="timeline-marker">
+            <div class="timeline-icon">
+                <i class="fas fa-file-contract"></i>
+            </div>
+            <h3>مطالعات و مجوزها</h3>
+            <span class="timeline-duration">ماه اول تا دوم</span>
+            <div class="timeline-steps">
+                <span>مطالعات امکان‌سنجی</span>
+                <span>اخذ مجوزهای قانونی</span>
+                <span>انتخاب زمین</span>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-marker">
+            <div class="timeline-icon">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <h3>قراردادها</h3>
+            <span class="timeline-duration">ماه سوم تا چهارم</span>
+            <div class="timeline-steps">
+                <span>عقد قرارداد با پیمانکاران</span>
+                <span>جذب سرمایه‌گذار</span>
+                <span>تامین تجهیزات</span>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-marker">
+            <div class="timeline-icon">
+                <i class="fas fa-hammer"></i>
+            </div>
+            <h3>عملیات ساخت</h3>
+            <span class="timeline-duration">ماه پنجم تا هشتم</span>
+            <div class="timeline-steps">
+                <span>آماده‌سازی زمین</span>
+                <span>نصب سازه‌ها</span>
+                <span>نصب پنل‌ها</span>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-marker">
+            <div class="timeline-icon">
+                <i class="fas fa-plug"></i>
+            </div>
+            <h3>راه‌اندازی سیستم</h3>
+            <span class="timeline-duration">ماه نهم تا دهم</span>
+            <div class="timeline-steps">
+                <span>نصب تجهیزات کنترلی</span>
+                <span>راه‌اندازی اینورترها</span>
+                <span>تست‌های اولیه</span>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-marker">
+            <div class="timeline-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>بهره‌برداری</h3>
+            <span class="timeline-duration">ماه یازدهم تا دوازدهم</span>
+            <div class="timeline-steps">
+                <span>اتصال به شبکه</span>
+                <span>تست نهایی</span>
+                <span>شروع تولید برق</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</section> 
+                                        <!-- Environmental Impact Section -->
+
+<!-- 
+<section class="environmental-section">
+    <h2 class="section-title">اثرات زیست محیطی</h2>
+    <div class="environmental-impact-grid">
+        <div class="environmental-impact-card">
+            <div class="environmental-impact-icon">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <h3 class="environmental-impact-title">کاهش آلاینده‌ها</h3>
+            <p class="environmental-impact-value">۱۵,۰۰۰ تن</p>
+            <span class="environmental-impact-description">کاهش سالانه انتشار CO2</span>
+        </div>
+        <div class="environmental-impact-card">
+            <div class="environmental-impact-icon">
+                <i class="fas fa-tree"></i>
+            </div>
+            <h3 class="environmental-impact-title">معادل درختکاری</h3>
+            <p class="environmental-impact-value">۲۵,۰۰۰ اصله </p>
+            <span class="environmental-impact-description">معادل درخت کاشته شده</span>
+        </div>
+        <div class="environmental-impact-card">
+            <div class="environmental-impact-icon">
+                <i class="fas fa-water"></i>
+            </div>
+            <h3 class="environmental-impact-title">صرفه‌جویی در آب</h3>
+            <p class="environmental-impact-value">۲۰ میلیون لیتر</p>
+            <span class="environmental-impact-description">کاهش مصرف سالانه آب</span>
+        </div>
+        <div class="environmental-impact-card">
+            <div class="environmental-impact-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <h3 class="environmental-impact-title">تأمین برق خانگی</h3>
+            <p class="environmental-impact-value">۵,۰۰۰ خانوار</p>
+            <span class="environmental-impact-description">معادل مصرف سالانه</span>
+        </div>
+    </div>
+</section> -->
+
+
+
+    <div id="footer"></div>
+
+
+
+</body>
+</html>
+

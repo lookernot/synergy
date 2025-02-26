@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تماس با ما - سینرژی سولار</title>
+    <link rel="stylesheet" href="/public/css/sections/header.css" />
+    <link rel="stylesheet" href="/public/css/sections/footer.css" />
+    <link rel="stylesheet" href="/public/fonts/fonts.css" />
+    <link rel="stylesheet" href="/public/css/pages/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="contact-hero-content">
+        <h1>تماس با ما</h1>
+        <p>ما همیشه آماده پاسخگویی به سوالات و پیشنهادات شما هستیم</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h1>با ما در ارتباط باشید</h1>
+          <p class="contact-description">
+            برای کسب اطلاعات بیشتر و یا ارائه نظرات خود با ما در تماس باشید
+          </p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="info-content">
+                <h3>تماس مستقیم</h3>
+                <p>۰۲۱-۲۲۳۳۴۴۵۵</p>
+                <p>۰۲۱-۲۲۳۳۴۴۵۶</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h3>ایمیل</h3>
+                <p>info@synergy.ir</p>
+                <p>support@synergy.ir</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>آدرس دفتر مرکزی</h3>
+                <p>تهران، سعادت آباد، خیابان علامه طباطبایی شمالی</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h2>فرم تماس</h2>
+          <form id="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                placeholder="نام و نام خانوادگی"
+                required
+              />
+              <label for="name">نام و نام خانوادگی</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                placeholder="example@email.com"
+                required
+              />
+              <label for="email">ایمیل</label>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required />
+              <label for="phone">شماره تماس</label>
+            </div>
+
+            <div class="form-group">
+              <select id="subject" required>
+                <option value="" disabled selected>
+                  لطفا موضوع را انتخاب کنید
+                </option>
+                <option value="investment">سرمایه‌گذاری</option>
+                <option value="technical">پشتیبانی فنی</option>
+                <option value="partnership">همکاری</option>
+                <option value="other">سایر موارد</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                id="message"
+                placeholder="پیام خود را اینجا بنویسید..."
+                required
+              ></textarea>
+              <label for="message">پیام شما</label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>ارسال پیام</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="/public/js/pages/contact.js"></script>
+  </body>
+</html>
