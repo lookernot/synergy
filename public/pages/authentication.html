@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/pages/authentication.css" />
+    <link rel="stylesheet" href="/public/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <title>ورود/ثبت نام</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="auth-wrapper">
+        <!-- Login Form Section -->
+        <div class="auth-right" id="loginForm">
+          <h1 class="auth-header">ورود به حساب کاربری</h1>
+          <form class="login-form">
+            <div class="form-group">
+              <label class="form-label">شماره همراه / کدملی / نام کاربری</label>
+              <div class="input-wrapper">
+                <input type="text" class="form-input" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">رمز عبور</label>
+              <div class="input-wrapper">
+                <i class="ti ti-eye toggle-password"></i>
+                <input type="password" class="form-input" />
+              </div>
+              <a href="#" class="forget-pas">رمز عبورخود را فراموش کرده ام</a>
+            </div>
+            <button type="submit" class="btn btn-primary">ورود</button>
+          </form>
+          <div class="auth-footer">
+            <span class="auth-text">حساب کاربری ندارید؟</span>
+            <button class="btn-link" data-form="signup">ثبت نام</button>
+          </div>
+        </div>
+
+        <!-- Signup Form Section -->
+        <div class="auth-right hidden" id="signupForm">
+          <h1 class="auth-header">ثبت نام در سینرژی</h1>
+          <form class="login-form">
+            <div class="form-group">
+              <label class="form-label">نام و نام خانوادگی</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="نام کامل خود را وارد کنید"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">شماره همراه</label>
+              <div class="input-wrapper">
+                <input
+                  type="tel"
+                  class="form-input"
+                  placeholder="09xxxxxxxxx"
+                />
+              </div>
+              <button type="button" class="btn-send-code">
+                ارسال کد تایید
+              </button>
+            </div>
+            <div class="form-group verification-group hidden">
+              <label class="form-label">کد تایید</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  class="form-input verify-input"
+                  maxlength="6"
+                  placeholder="کد 6 رقمی"
+                />
+              </div>
+              <div class="verify-timer">
+                <button type="button" class="resend-code disabled">
+                  ارسال مجدد کد
+                </button>
+                <span class="timer"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">ثبت نام</button>
+          </form>
+          <div class="auth-footer">
+            <span class="auth-text">قبلاً ثبت نام کرده‌اید؟</span>
+            <button class="btn-link" data-form="login">ورود</button>
+          </div>
+        </div>
+
+        <!-- Left Section -->
+        <div class="auth-left">
+          <div class="auth-left-content">
+            <div class="logo-container">
+              <img
+                src="/public/img/logo/logoSynergy.png"
+                alt="Synergy Logo"
+                class="auth-logo"
+              />
+            </div>
+            <div class="security-info">
+              <h2 class="security-title">نکات امنیتی پلتفرم سینرژی</h2>
+              <div class="security-items">
+                <div class="security-item">
+                  <h3>پروتکل امن SSL</h3>
+                  <p>
+                    پلتفرم سینرژی برای حفاظت از اطلاعات کاربران خود از پروتکل
+                    امن SSL استفاده می‌کند. لطفاً همیشه از طریق نشانی رسمی و
+                    معتبر ما
+                    <a href="https://synergy.co.ir" class="security-link"
+                      >https://synergy.co.ir</a
+                    >
+                    وارد شوید.
+                  </p>
+                </div>
+                <div class="security-item">
+                  <h3>دقت در ورود آدرس سایت</h3>
+                  <p>
+                    لطفاً آدرس دقیق سایت را مستقیماً در مرورگر خود وارد کنید و
+                    برای جستجوی نشانی سایت از موتورهای جستجو استفاده نکنید. از
+                    کلیک روی لینک‌های مشکوک در ایمیل‌ها، پیامک‌ها یا شبکه‌های
+                    اجتماعی که ممکن است جعلی باشند، خودداری نمایید.
+                  </p>
+                </div>
+                <div class="security-item">
+                  <h3>حفاظت از اطلاعات حساس</h3>
+                  <p>
+                    هنگام وارد کردن اطلاعات کاربری (نام کاربری و رمز عبور) در
+                    پلتفرم سینرژی، از امنیت سیستم و مرورگر خود اطمینان حاصل
+                    کنید. همچنین توصیه می‌شود از نرم‌افزارهای معتبر مدیریت رمز
+                    عبور استفاده نمایید تا ریسک سرقت اطلاعات کاهش یابد.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Simple form switching logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const loginForm = document.getElementById("loginForm");
+        const signupForm = document.getElementById("signupForm");
+
+        document.querySelectorAll(".btn-link").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            if (e.target.dataset.form === "signup") {
+              loginForm.classList.add("hidden");
+              signupForm.classList.remove("hidden");
+            } else {
+              signupForm.classList.add("hidden");
+              loginForm.classList.remove("hidden");
+            }
+          });
+        });
+
+        // Keep the verification code and timer functionality from the previous JS file
+      });
+    </script>
+  </body>
+</html>
